@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background: #2c2c2c; /* Dark Gray Background for a modern look */
+}
+
+.container .navbar {
+    display: flex;
+    height: 15vh;
+    width: 98%;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 2rem; /* Padding for spacing */
+}
+
+.navbar .navlist {
+    display: flex;
+    gap: 2.7rem;
+    font-size: 1.2rem;
+}
+
+.navlist li {
+    list-style: none;
+    position: relative; /* Positioning for the underline effect */
+}
+
+.navlist a {
+    color: #f5a623; /* Bright Orange for Links */
+    text-decoration: none;
+    letter-spacing: .08rem;
+    padding: .5rem 0; /* Padding to create space for underline */
+    display: inline-block; /* Ensures padding and underline work correctly */
+}
+
+.navlist a::after {
+    content: ""; /* Empty content for the underline */
+    display: block;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background: #f5a623; /* Color of the underline */
+    transition: width .3s ease; /* Smooth transition effect */
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the link */
+    left: 0;
+}
+
+.navlist a:hover::after {
+    width: 100%; /* Underline spans the full width on hover */
+}
+
+.navbar button {
+    background-color: #4a4a4a; /* Dark Gray Button */
+    border: none;
+    font-size: 1.1rem;
+    color: #f5f5f5; /* Light Gray Text */
+    padding: .9rem 1.5rem;
+    letter-spacing: .08rem;
+    border-radius: .5rem; /* Slightly rounded corners */
+    transition: background-color .3s ease, transform .3s ease; /* Smoother transition */
+}
+
+.navbar button:hover {
+    background-color: #6a6a6a; /* Lighter Gray on Hover */
+    cursor: pointer;
+    transform: scale(1.05); /* Slightly zooms in */
+}
+
+/* Explore More Button Styles */
+.explore-btn {
+    font-size: 1rem;
+    margin-top: 0.5rem; /* Increased top margin */
+    padding: 0.8rem 1.5rem; /* Adjusted padding for better size */
+    border: 2px solid #f5a623; /* Border color */
+    background-color: transparent; /* Transparent background */
+    color: #f5a623; /* Text color matching the border */
+    border-radius: 0.5rem; /* Rounded corners */
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease, transform .3s ease; /* Smooth transition for all effects */
+}
+
+.explore-btn:hover {
+    background-color: #f5a623; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+    border-color: #f5a623; /* Border color on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+    transform: scale(1.05); /* Slightly zooms in */
+}
+
+/* Get Started Button Styles */
+.get-started-btn {
+    background-color: #4a4a4a; /* Dark Gray Button */
+    border: 2px solid #6a6a6a; /* Border color */
+    color: #f5f5f5; /* Light Gray Text */
+    font-size: 1rem;
+    padding: .8rem 1.5rem; /* Adjusted padding */
+    border-radius: .5rem; /* Rounded corners */
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease, transform .3s ease; /* Smooth transition for all effects */
+}
+
+.get-started-btn:hover {
+    background-color: #6a6a6a; /* Lighter Gray on Hover */
+    color: #ffffff; /* White text on hover */
+    border-color: #6a6a6a; /* Border color on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+    transform: scale(1.05); /* Slightly zooms in */
+}
+
+h1 {
+    font-size: 2.5rem; /* Larger heading for emphasis */
+    color: #ffffff; /* White color for better readability */
+    margin-bottom: 1.5rem; /* Increased bottom margin */
+}
+
+p {
+    color: #e0e0e0; /* Light Gray for readability */
+    font-style: italic;
+    margin-bottom: 2rem; /* Increased bottom margin */
+}
+
+/*button {
+    font-size: 1rem;
+    margin-top: 0.5rem; /* Increased top margin */
+
+    /* Specific styles for Explore More button */
+button{
+    font-size: 1rem;
+    margin-top: 0.5rem; /* Increased top margin */
+    padding: 0.8rem 1.5rem; /* Adjusted padding for better size */
+    border: 2px solid #f5a623; /* Border color */
+    background-color: transparent; /* Transparent background */
+    color: #f5a623; /* Text color matching the border */
+    border-radius: 0.5rem; /* Rounded corners */
+    transition: background-color .3s ease, color .3s ease, border-color .3s ease, transform .3s ease; /* Smooth transition for all effects */
+}
+
+button:hover {
+    background-color: #f5a623; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+    border-color: #f5a623; /* Border color on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+    transform: scale(1.05); /* Slightly zooms in */
+}
+
+
+.game-area {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centered content */
+    height: calc(100vh - 13vh);
+    width: 90%;
+    margin: auto;
+    gap: 2rem; /* Reduced gap between items */
+}
+
+.game-box {
+    width: 80%; /* Adjusted width */
+    background-color: #1e2a38; /* Even darker blue for contrast */
+    border-radius: 1rem;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6); /* Enhanced shadow for depth */
+    position: relative;
+    overflow: hidden;
+}
+
+.game-box img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensure image is displayed */
+}
