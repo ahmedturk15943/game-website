@@ -126,12 +126,8 @@ p {
     margin-bottom: 2rem; /* Increased bottom margin */
 }
 
-/*button {
-    font-size: 1rem;
-    margin-top: 0.5rem; /* Increased top margin */
-
-    /* Specific styles for Explore More button */
-button{
+/* Specific styles for Explore More button */
+button {
     font-size: 1rem;
     margin-top: 0.5rem; /* Increased top margin */
     padding: 0.8rem 1.5rem; /* Adjusted padding for better size */
@@ -174,4 +170,40 @@ button:hover {
     width: 100%;
     height: auto;
     display: block; /* Ensure image is displayed */
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+    .container .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .navbar .navlist {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem; /* Reduce gap for smaller screens */
+    }
+
+    .game-area {
+        flex-direction: column;
+        gap: 1.5rem; /* Reduce gap for smaller screens */
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .game-box {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 0 auto; /* Center the box on smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        text-align: center; /* Center text on smaller screens */
+    }
 }
